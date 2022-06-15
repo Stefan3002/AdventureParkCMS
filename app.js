@@ -264,5 +264,5 @@ app.get("/", (req,res) => {
 })
 
 app.listen(Process.env.PORT || port, () => {
-    console.log("App started on: " + port)
+    console.log("App started on: " + Process.env.PORT || port)
 })
