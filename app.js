@@ -6,6 +6,7 @@ const passport = require("passport")
 const passportMongoose = require("passport-local-mongoose")
 const {plugin} = require("mongoose");
 const Process = require("process");
+const ejs = require("ejs")
 require("dotenv").config()
 const app = express()
 const port = 3000
