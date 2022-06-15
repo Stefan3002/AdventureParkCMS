@@ -5,6 +5,7 @@ const session = require("express-session")
 const passport = require("passport")
 const passportMongoose = require("passport-local-mongoose")
 const {plugin} = require("mongoose");
+const Process = require("process");
 require("dotenv").config()
 const app = express()
 const port = 3000
@@ -261,6 +262,6 @@ app.get("/", (req,res) => {
     res.render("index")
 })
 
-app.listen(port, () => {
+app.listen(Process.env.PORT || port, () => {
     console.log("App started on: " + port)
 })
