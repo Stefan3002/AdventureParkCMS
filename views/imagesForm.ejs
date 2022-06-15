@@ -1,0 +1,19 @@
+<%- include("header") -%>
+<section style="text-align: center; margin: 5rem 0;" class="wrapper pricesForm">
+    <form action="/gallery" method="post">
+        <input type="text" required placeholder="Url imagine" name="img">
+        <button class="button-black">Adauga o imagine noua.</button>
+    </form>
+</section>
+<section style="margin-top: 5rem; text-align: center;" class="gallery">
+    <h2 class="section-title">Imaginile curente<span class="dot">:</span></h2>
+    <section class="gallery2">
+        <%for(let i = 0; i < imgs.length; i++){%>
+        <div class="gallery-img">
+            <a href="/galleryDelete/<%=imgs[i].id%>"><button class="button-black">Sterge imaginea de jos.</button></a>
+            <a href="<%=imgs[i].img%>"><img src="<%=imgs[i].img%>" alt=""></a>
+        </div>
+        <% } %>
+    </section>
+</section>
+<%- include("footer") -%>

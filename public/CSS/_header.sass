@@ -1,0 +1,81 @@
+.title
+  animation-name: slide-left
+  animation-duration: 1s
+  color: white
+  letter-spacing: 5px
+  font-family: $font-header
+  text-align: center
+  font-size: 2.5rem
+  margin-top: 10%
+.intro
+  width: 99vw
+  height: 100vh
+  position: relative
+  button
+    animation-name: slide-right
+    animation-duration: 1s
+  animation-name: fade
+  animation-duration: 1s
+  background: linear-gradient(to top, rgba(0,0,0,0), rgba(0,0,0,1))
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  //height: 110vh
+  video
+    object-fit: cover
+    width: 100%
+    height: 100%
+    position: absolute
+    z-index: -1
+    left: 0
+    top: 0
+.main-nav
+  z-index: 1
+  position: fixed
+  top: 0
+  width: calc(100% - 4rem)
+  background: white
+  padding: 20px 2rem
+  display: flex
+  justify-content: space-between
+  ul
+    list-style-type: none
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    li
+      margin: 0 .5rem
+.socials
+  display: flex
+
+.fa-computer-mouse
+  animation-name: scrollDown
+  animation-duration: 1s
+  animation-iteration-count: infinite
+@keyframes scrollDown
+  from
+    transform: translateY(0)
+  50%
+    transform: translateY(30%)
+  to
+    transform: translateY(0)
+@keyframes fade
+  from
+    opacity: 0
+  to
+    opacity: 1
+
+@keyframes slide-left
+  from
+    transform: translateX(100%)
+  to
+    transform: translateX(0)
+
+
+@keyframes slide-right
+  from
+    transform: translateX(-100%)
+  to
+    transform: translateX(0)

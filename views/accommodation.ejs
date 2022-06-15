@@ -1,0 +1,21 @@
+<%- include("header") -%>
+<section class="accommodation">
+    <div class="cards_">
+    <% for(let i = 0; i < services.length; i++){ %>
+        <%if(services[i].type === "prices"){%>
+        <div class="card_">
+            <div class="img-wrapper">
+                <img src="<%=services[i].img%>" alt="">
+            </div>
+            <div class="text-wrapper">
+                <h2 class="section-title"><%=services[i].name%><span class="dot">.</span></h2>
+                <p>Preturi:</p>
+                <p><%=services[i].price%></p>
+                <p><%=services[i].description.substring(0,150)%>...</p>
+                <a href="/moreInfo/accommodation/<%=services[i].id%>"><button>Citeste mai mult.</button></a>
+            </div>
+        </div>
+        <% } }%>
+    </div>
+</section>
+<%- include("footer") -%>

@@ -1,0 +1,30 @@
+.accommodation
+  margin-bottom: 10rem
+  .cards_
+    text-align: center
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    grid-auto-rows: 1fr
+    justify-content: center
+    .card_
+      margin: 2rem
+      margin-bottom: 10px
+      .img-wrapper
+        //width: 100%
+        height: 35vh
+        img
+          object-fit: cover
+          width: 100%
+          height: 100%
+          border-radius: 10px 10px 0 0
+      .text-wrapper
+        //height: 100%
+        padding: 2rem
+        background: $alt-color
+        color: whitesmoke
+        border-radius: 0 0 10px 10px
+
+@media screen and (max-width: 1000px)
+  .accommodation
+    .cards_
+      display: block

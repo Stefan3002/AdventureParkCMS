@@ -1,0 +1,40 @@
+<%- include("header") -%>
+<section class="wrapper contact_">
+    <div class="contact-left">
+        <h2 class="section-title">
+            Unde ne gasiti<span class="dot">?</span>
+        </h2>
+        <p><i class="fa-black fa-xl fa-solid fa-map"></i>Județul Gorj, Comuna Arcani, Sat Sănătești, Nr. 225</p>
+
+        <p><i class="fa-black fa-xl fa-solid fa-phone-volume"></i>Număr telefon recepție cazare
+            0748.101.000 <br>
+            Număr telefon rezervări evenimente <br>
+            (tabere, majorate, onomastici, cununii) <br>
+            +40740.009.701 <br>
+        </p>
+        <p><i class="fa-black fa-xl fa-solid fa-envelope"></i>Scrie-ne un email: office@apriliasrl.ro </p>
+
+            <p><i class="fa-black fa-xl fa-solid fa-globe"></i>Coordonate GPS: <br>
+            Latitudine: 45.101370477478625, Longitudine: 23.1360777840614<p>
+            <p><i class="fa-black fa-xl fa-solid fa-building-columns"></i> Cont bancar <br>
+            RO50 BACX 14523 0045 5689 1234</p>
+    </div>
+    <div class="contact-right">
+        <h2 class="section-title">FAQ<span class="dot">.</span></h2>
+        <p class="question">Ce temperatura are apa?</p>
+        <p class="answer">Apa are 28-31 grade C</p>
+        <p class="question">Ce tarif se aplica pentru copii?</p>
+        <p class="answer">Copii sub 5 ani au gratuitate.</p>
+        <p class="question">Se ofera reduceri?</p>
+        <p class="answer">Da, in zilele de sarbatoare legala si in weekend-uri.</p>
+        <p class="question">Care sunt preturile?</p>
+        <div class="prices-faq">
+            <%for(let i = 0; i < services.length; i++){%>
+            <a href="/moreInfo/<%=services[i].type%>/<%=services[i].id%>"><p class="answer" style="font-size: 1rem;"><%=services[i].name%></p></a>
+            <a href="/moreInfo/<%=services[i].type%>/<%=services[i].id%>"> <p class="answer"><%=services[i].price.substring(0,20)%>...</p> </a>
+    <!--                <hr>-->
+            <%}%>
+        </div>
+    </div>
+</section>
+<%- include("footer") -%>

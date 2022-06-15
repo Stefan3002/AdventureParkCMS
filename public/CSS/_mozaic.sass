@@ -1,0 +1,32 @@
+.mozaic
+  margin-top: 5rem
+  text-align: justify
+  //height: 100vh
+  display: grid
+  grid-template-columns: 2fr 2fr 1fr
+  grid-template-areas: 'hero hero aside-top' 'hero hero aside-bottom'
+  .hero
+    display: flex
+    align-items: center
+    padding: 2rem
+    text-align: left
+    .hero-text
+      text-align: left
+      width: 30%
+    grid-area: hero
+    color: whitesmoke
+    background: linear-gradient(to left, rgba(0,0,0,0), rgba(0,0,0,.5)), url("../Images/shayan-rti-bSlZs04ZjqU-unsplash.jpg")
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: 50% 30%
+  .aside-top
+    grid-area: aside-top
+    padding: 2rem
+  .aside-bottom
+    grid-area: aside-bottom
+    background: $alt-color
+    color: whitesmoke
+    padding: 2rem
+@media screen and (max-width: 768px)
+  .mozaic
+    display: block

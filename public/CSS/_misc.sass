@@ -1,0 +1,101 @@
+.loader
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  background: rgba(255,255,255,.7)
+  display: flex
+  justify-content: center
+  align-items: center
+button
+  text-align: center
+  color: white
+  padding: 1rem
+  background: transparent
+  border: 1px solid white
+  font-family: $font-body
+  position: relative
+  &::before
+    content: ''
+    height: 100%
+    width: 0
+    position: absolute
+    left: 0
+    top: 0
+    transition: all .2s
+    background: whitesmoke
+  &:hover::before
+    content: 'Haide!'
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 100%
+    color: black
+    transition: all .2s
+.button-black
+  color: black
+  border: 1px solid black
+  &::before
+    background: $alt-color
+  &:hover::before
+    color: whitesmoke
+.fa
+  color: white
+  margin: 1rem
+.fa-black
+  color: black
+  margin: 0 .4em
+a
+  color: inherit
+  text-decoration: none
+  position: relative
+  z-index: 1
+  &::before
+    z-index: -1
+    content: ''
+    background: gray
+    border-radius: 5px
+    height: 100%
+    width: 0
+    position: absolute
+    left: 0
+    top: 0
+    transition: all .2s
+  &:hover::before
+    width: 100%
+    transition: all .2s
+.wrapper
+  margin: 10px 15%
+
+.section-title
+  text-align: center
+  font-size: 2.2rem
+  font-family: $font-header
+
+hr
+  width: 5%
+  border: 0
+  border-top: 10px
+  border-style: dotted
+  color: inherit
+.alt-text
+  color: $alt-color
+.dot
+  font-size: 3.5rem
+
+input, select
+  margin: .5rem
+  text-align: center
+  padding: 1rem
+  border: 1px solid black
+  background: transparent
+  font-family: $font-body
+  color: black
+.input-white
+  color: white
+  border: 1px solid whitesmoke
+
+@media screen and (max-width: 768px)
+  .wrapper
+    margin: 20px

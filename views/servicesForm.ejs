@@ -1,0 +1,49 @@
+<%- include("header") -%>
+<section style="text-align: center; margin: 5rem 0;" class="wrapper pricesForm">
+    <form action="/services/<%=type%>" method="post">
+        <select name="type">
+            <option value="prices">Cazare</option>
+            <option value="attractions">Atractie</option>
+        </select>
+        <input type="text" required placeholder="Nume/tip" name="name">
+        <input type="text" required placeholder="Pret" name="price">
+        <input type="text" required placeholder="Descriere" name="description">
+        <input type="text" required placeholder="Url imagine" name="img">
+        <button class="button-black">Adauga.</button>
+    </form>
+    <h2 class="section-title">Facilitati curente<span class="dot">:</span></h2>
+</section>
+<section style="margin-bottom: 20rem;" class="accommodation">
+    <div class="cards_">
+        <% for(let i = 0; i < services.length; i++){ %>
+        <%if(services[i].type === type){%>
+        <div class="card_">
+            <div class="img-wrapper">
+                <img src="<%=services[i].img%>" alt="">
+            </div>
+            <div class="text-wrapper">
+                <h2 class="section-title"><%=services[i].name%><span class="dot">.</span></h2>
+                <a href="/servicesDelete/<%=services[i].id%>/<%=type%>" onclick="return prompt('Sunteti sigur ca vreti sa stergeti aceasta inregistrare?')"><button>Sterge.</button></a>
+                <hr>
+                <form action="/servicesModify/<%=services[i].id%>/<%=type%>" method="post">
+                    <select style="background: whitesmoke" name="type">
+                        <option value="prices">Cazare</option>
+                        <option value="attractions">Atractie</option>
+                    </select>
+                    <br>
+                    <input class="input-white" type="text" required placeholder="Nume/tip" name="name" value="<%=services[i].name%>"><br>
+                    <input class="input-white" type="text" required placeholder="Pret" name="price" value="<%=services[i].price%>"><br>
+                    <input class="input-white" type="text" required placeholder="Descriere" name="description" value="<%=services[i].description%>"><br>
+                    <input class="input-white" type="text" required placeholder="Url imagine" name="img" value="<%=services[i].img%>"><br>
+                    <hr>
+                    <button>Modifica.</button>
+                </form>
+                <p>Detalii:</p>
+                <p><%=services[i].price%></p>
+                <p><%=services[i].description%></p>
+            </div>
+        </div>
+        <% } }%>
+    </div>
+</section>
+<%- include("footer") -%>

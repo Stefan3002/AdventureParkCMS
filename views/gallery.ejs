@@ -1,0 +1,9 @@
+<%-include("header")-%>
+<section style="margin-top: 5rem;" class="gallery">
+    <section class="gallery2">
+        <%for(let i = 0; i < imgs.length; i++){%>
+        <div class="gallery-img"> <a href="<%=imgs[i].img%>"><img src="<%=imgs[i].img%>" alt=""></a></div>
+        <% } %>
+    </section>
+</section>
+<%-include("footer")-%>

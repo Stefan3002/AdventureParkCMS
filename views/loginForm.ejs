@@ -1,0 +1,10 @@
+<%- include("header") -%>
+<section style="margin: 5rem 0; text-align: center;" class="wrapper">
+    <p style="text-align: center;">Pentru vizitatori: E-mail: test, Parola: test</p>
+    <form action="/login" method="post">
+        <input type="text" name="username" placeholder="E-mail" required>
+        <input type="password" name="password" placeholder="Parola" required>
+        <button class="button-black">Autentificare.</button>
+    </form>
+</section>
+<%- include("footer") -%>

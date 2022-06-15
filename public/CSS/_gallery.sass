@@ -1,0 +1,23 @@
+.gallery1
+  margin-top: 7rem
+  //background: $alt-color
+  display: grid
+  grid-template-columns: 1fr 1fr 1fr 1fr
+.gallery2
+  //background: $alt-color
+  display: grid
+  grid-template-columns: 1fr 2fr 2fr 1fr
+.gallery-img
+  img
+    filter: grayscale(100)
+    object-fit: cover
+    width: 100%
+    height: 100%
+    transition: all .15s
+    &:hover
+      filter: grayscale(0)
+      transform: scale(1.1)
+      transition: all .15s
+@media screen and (max-width: 1000px)
+  .gallery1, .gallery2
+    grid-template-columns: 1fr
